@@ -42,7 +42,10 @@ html {
   overflow: hidden;
 }
 section {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
 }
+
 .section__wrapper {
   max-width: 1000px;
   margin: 0px auto;
@@ -78,7 +81,8 @@ section {
   display: flex;
   width: 100%;
   min-height: 48px;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 50px;
   align-content: center;
   z-index: 100;
   position: fixed;
@@ -237,6 +241,8 @@ section {
   display: flex;
   max-width: 1020px;
   margin: 0 auto;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
 }
 
 .projects {
@@ -379,6 +385,8 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   -webkit-box-align: center;
   align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
 }
 .project__content {
   position: relative;
@@ -524,4 +532,8 @@ a svg {
 .featured__project .project-image a:focus .img {
   background: transparent;
   filter: none;
+}
+
+.hidden {
+  opacity: 0;
 }

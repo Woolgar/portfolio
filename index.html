@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tobias Faucette is a web developer & freelance photographer based in Aalborg Denmark">
     <title>Tobias Faucette | Web developer</title>
+    <meta property="og:title" content="Tobias Faucette | Web Developer"/>
+    <meta property="og:description" content="JavaScript wizard, chaotic good" />
+    <meta property="og:image" content="https://woolgar.dk/assets/images/cv.jpg"/>
+    <meta property="og:url" content="https://woolgar.dk" />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="https://use.typekit.net/bly4ikw.css">
@@ -12,7 +18,7 @@
 <body>
     <header class="section" id="header">
         <nav class="nav">
-            <!-- <img class="logo" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" alt="avatar"> -->
+             <img class="logo" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png" alt="avatar"> 
             <ul class="nav__items">
                 <li class="nav__item"><a class="current" href="#header">Home</a></li>
                 <li class="nav__item"><a href="#about">About</a></li>
@@ -30,15 +36,15 @@
                     
                     <p>
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/tobias-faucette/" target="_blank">
+                            <a href="https://www.linkedin.com/in/tobias-faucette/" rel="noopener noreferrer" target="_blank">
                                 <i class="fab fa-linkedin-in">
                                 </i>
                             </a>
-                            <a href="https://www.instagram.com/tobiasfaucette/" target="_blank">
+                            <a href="https://www.instagram.com/tobiasfaucette/" rel="noopener noreferrer" target="_blank">
                                 <i class="fab fa-instagram">
                                 </i>
                             </a>
-                            <a href="https://github.com/Woolgar" target="_blank">
+                            <a href="https://github.com/Woolgar" rel="noopener noreferrer" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -50,9 +56,9 @@
         </section>
     </header>
     <section class="section" id="about">
-        <div class="about__row">
-            <div class="about__image">
-                <img src="/assets/images/cv.jpg">
+        <div class="about__row hidden">
+            <div class="about__image ">
+                <img src="/assets/images/cv.jpg" alt="">
             </div>
             <div class="about__content">
                 <h2>About me</h2>
@@ -78,11 +84,11 @@
             </div>
         </div>
     </section>
-    <section id="projects">
+    <section id="projects" class="">
 <div class="section__wrapper">
         <h2 class="section__heading">Things I'm building</h2>
         <ul class="featured__projectGrid">
-            <li class="featured__project">
+            <li class="featured__project hidden">
                 <div class="project__content">
                     <div>
                         <p class="project__overline">Featured Project</p>
@@ -94,10 +100,10 @@
                             <li>Tmdb API</li>
                         </ul>
                         <div class="project__links">
-                            <a href="https://github.com/Woolgar/netflix-clone" target="_blank">
+                            <a href="https://github.com/Woolgar/netflix-clone" rel="noopener noreferrer" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             </a>
-                            <a href="https://netflix-clone-7cad3.web.app/" target="_blank">
+                            <a href="https://netflix-clone-7cad3.web.app/"  rel="noopener noreferrer" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             </a>
                         </div>
@@ -114,7 +120,7 @@
                     </a>
                 </div>
             </li>
-            <li class="featured__project">
+            <li class="featured__project hidden">
                 <div class="project__content">
                     <div>
                         <p class="project__overline">Featured Project</p>
@@ -126,10 +132,10 @@
                             <li>API</li>
                         </ul>
                         <div class="project__links">
-                            <a href="hhttps://github.com/Woolgar/corona-statistics" target="_blank">
+                            <a href="hhttps://github.com/Woolgar/corona-statistics" rel="noopener noreferrer"target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             </a>
-                            <a href="https://corona.woolgar.dk/" target="_blank">
+                            <a href="https://corona.woolgar.dk/" rel="noopener noreferrer" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             </a>
                         </div>
@@ -146,22 +152,22 @@
                     </a>
                 </div>
             </li>
-            <li class="featured__project">
+            <li class="featured__project hidden">
                 <div class="project__content">
                     <div>
                         <p class="project__overline">Featured Project</p>
                         <h3 class="project__title">Amazon Clone</h3>
-                        <div class="project__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+                        <div class="project__description">Amazon UI clone by using react & state management to handle customer journey, Stripe test API to allow test purchase. Firebase with authentication for user creation and login</div>
                         <ul class="project__tech__list">
                             <li>React</li>
                             <li>Firebase</li>
                             <li>Stripe API</li>
                         </ul>
                         <div class="project__links">
-                            <a href="https://github.com/Woolgar/amazon-clone" target="_blank">
+                            <a href="https://github.com/Woolgar/amazon-clone" rel="noopener noreferrer" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             </a>
-                            <a href="https://fir-32983.web.app/" target="_blank">
+                            <a href="https://fir-32983.web.app/" rel="noopener noreferrer" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title>External Link</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                             </a>
                         </div>
@@ -183,17 +189,17 @@
         </ul>
 </div>
     </section>
-    <footer>
+    <footer class="">
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/tobias-faucette/" target="_blank">
+            <a href="https://www.linkedin.com/in/tobias-faucette/" rel="noopener noreferrer" target="_blank">
                 <i class="fab fa-linkedin-in">
                 </i>
             </a>
-            <a href="https://www.instagram.com/t_photographyz/" target="_blank">
+            <a href="https://www.instagram.com/t_photographyz/" rel="noopener noreferrer" target="_blank">
                 <i class="fab fa-instagram">
                 </i>
             </a>
-            <a href="https://github.com/Woolgar" target="_blank">
+            <a href="https://github.com/Woolgar" rel="noopener noreferrer" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </div>
