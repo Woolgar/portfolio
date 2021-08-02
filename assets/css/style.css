@@ -4,13 +4,14 @@
   --light-navy: #112240;
   --lightest-navy: #233554;
   --navy-shadow: rgba(2, 12, 27, 0.7);
-  --dark-slate: #495670;
+  --dark-muted: #191a1d;
   --slate: #8892b0;
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
   --blue: #33caca;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --text-light: #ebeffb;
 }
 
 * {
@@ -33,12 +34,40 @@ html {
   height: 100vh;
   min-height: 500px;
   width: 100%;
-  background-color: #191a1d;
-  background-image: url("/assets/images/hero-bg.JPG");
+  background-color: var(--dark-muted);
   background-repeat: no-repeat, repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+}
+
+.section__wrapper {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 100px 0px;
+}
+
+.section__heading {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  color: var(--text-light);
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  white-space: nowrap;
+}
+
+.section__heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -5px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
 }
 
 .active {
@@ -74,7 +103,7 @@ html {
 
 .nav .nav__items .nav__item a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-light);
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -100,7 +129,7 @@ html {
 .fa-bars {
   height: 25px;
   width: 25px;
-  color: #fff !important;
+  color: var(--text-light) !important;
 }
 
 .nav__toggle {
@@ -123,7 +152,7 @@ html {
 .site__banner .site__banner__content h1 {
   font-size: 72px;
   line-height: 36px;
-  color: #fff;
+  color: var(--text-light);
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -133,21 +162,21 @@ html {
 }
 
 .site__banner .site__banner__content h3 {
-  color: #b7b7b7;
+  color: var(--text-light);
   text-align: center;
   font-size: 18px;
   margin-bottom: 40px;
 }
 
 .site__banner .site__banner__content h3 span {
-  color: #fff;
+  color: var(--text-light);
 }
 
 .site__banner .site__banner__content__btn {
   display: flex;
   width: 150px;
   padding: 10px;
-  color: #fff;
+  color: var(--text-light);
   text-decoration: none;
   border: 1px solid #fff;
   justify-content: center;
@@ -190,7 +219,7 @@ html {
 }
 
 #about h2 {
-  color: #fff;
+  color: var(--text-light);
 }
 
 #about p {
@@ -212,7 +241,7 @@ html {
   cursor: pointer;
   height: auto;
   margin-bottom: 18px;
-  color: #fff;
+  color: var(--text-light);
   text-decoration: none;
   justify-content: center;
   border: none;
@@ -289,7 +318,7 @@ html {
 
 .social-links a {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--text-light);
   text-decoration: none;
   margin-right: 15px;
 }
@@ -303,14 +332,10 @@ footer {
   padding-top: 48px;
   padding-bottom: 48px;
   background-color: #0f0f0f;
-  color: #303030;
+  color: var(--text-light);
   font-size: 14px;
   text-align: center;
   position: relative;
-}
-
-footer .social-links a {
-  color: #525252;
 }
 
 .footer__copyright {
@@ -355,6 +380,10 @@ footer .social-links a {
 }
 
 /* PROJECT SECTION */
+#projects {
+  background-color: var(--dark-muted);
+}
+
 .featured__projectGrid {
   list-style: none;
   padding: 0px;
@@ -517,34 +546,7 @@ a svg {
   width: 22px;
   height: 22px;
   margin-top: -4px;
-}
-
-section {
-  margin: 0px auto;
-  padding: 100px 0px;
-  max-width: 1000px;
-}
-
-.section__heading {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  position: relative;
-  margin: 10px 0px 40px;
-  width: 100%;
-  font-size: clamp(26px, 5vw, var(--fz-heading));
-  white-space: nowrap;
-}
-
-.section__heading::after {
-  content: "";
-  display: block;
-  position: relative;
-  top: -5px;
-  width: 300px;
-  height: 1px;
-  margin-left: 20px;
-  background-color: var(--lightest-navy);
+  color: var(--light-slate);
 }
 
 .featured__project .project-image a:hover::before,
