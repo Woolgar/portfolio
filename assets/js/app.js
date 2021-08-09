@@ -57,9 +57,6 @@ function scanDocument() {
       section.classList.remove("hidden");
     }
   });
-
-  console.log(numberOfScans);
-  numberOfScans++;
 }
 
 document.addEventListener("scroll", throttle(scanDocument, 200));

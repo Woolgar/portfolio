@@ -1,17 +1,29 @@
+/* 
+Dark col:
+#1f1f1f
+
+#222222
+
+ #30e0c5 
+
+*/
 :root {
   --dark-navy: #020c1b;
   --navy: #0a192f;
   --light-navy: #112240;
   --lightest-navy: #233554;
-  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --navy-shadow: rgba(23, 24, 26, 0.7);
   --dark-muted: linear-gradient(rgb(47, 59, 84), rgb(23, 28, 40));
-  --slate: #8892b0;
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
   --blue: #33caca;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --text-light: #ebeffb;
+  --dark-gray: #1f1f1f;
+  --muted-gray: #222222;
+  --border-radius: 5px;
+  --font: monospace;
 }
 
 * {
@@ -26,11 +38,11 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: proxima-nova;
+  font-family: var(--font);
 }
 
 body {
-  background: var(--dark-muted);
+  background: var(--dark-gray);
 }
 
 #header {
@@ -47,8 +59,8 @@ body {
 .side__element {
   position: fixed;
   width: 50px;
-  bottom: 0;
-  left: 40px;
+  bottom: 20px;
+  left: 20px;
   right: auto;
   z-index: 2;
 }
@@ -74,7 +86,7 @@ body {
 
 .side__element .side__socials li a:hover {
   transition: all 0.2s;
-  color: #33caca;
+  color: var(--blue);
 }
 
 .side__element::after {
@@ -115,11 +127,11 @@ section {
   width: 300px;
   height: 1px;
   margin-left: 20px;
-  background-color: var(--lightest-navy);
+  background-color: var(--blue);
 }
 
 .active {
-  background-color: rgba(21, 39, 65, 0.85);
+  background-color: var(--muted-gray);
   box-shadow: 0 10px 30px -10px var(--navy-shadow);
 }
 
@@ -159,11 +171,11 @@ section {
 }
 
 .nav .nav__items .nav__item a:hover {
-  color: #33caca;
+  color: #30e0c5;
 }
 
 .nav .nav__items .nav__item a.current {
-  color: #33caca;
+  color: #30e0c5;
 }
 
 .nav .nav__toggleShow {
@@ -197,18 +209,51 @@ section {
   align-items: center;
   display: flex;
   justify-content: center;
+  /* The typing effect */
+  /* The typewriter cursor effect */
 }
 
 .site__banner .site__banner__content h1 {
-  font-size: 72px;
+  font-size: 56px;
+  height: 55px;
+  padding: 10px;
   line-height: 36px;
   color: var(--text-light);
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--font);
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--blue);
+  }
 }
 
 .site__banner .site__banner__content .site__banner__h1 {
-  color: #33caca;
+  color: #30e0c5;
 }
 
 .site__banner .site__banner__content h3 {
@@ -229,6 +274,7 @@ section {
   color: var(--text-light);
   text-decoration: none;
   border: 1px solid #fff;
+  border-radius: var(--border-radius);
   justify-content: center;
   margin: auto;
   font-weight: 600;
@@ -237,12 +283,12 @@ section {
 }
 
 .site__banner .site__banner__content__btn:hover {
-  background-color: #33caca;
-  border: 1px solid #33caca;
+  background-color: #30e0c5;
+  border: 1px solid #30e0c5;
 }
 
 #about {
-  background: #231919;
+  background: var(--muted-gray);
   padding-top: 96px;
   padding-bottom: 66px;
   overflow: hidden;
@@ -275,6 +321,10 @@ section {
 #about p {
   line-height: 30px;
   color: #7a7a7a;
+  margin: 0px 0px 15px;
+}
+
+#about p:nth-last-of-type(1) {
   margin: 0 0 30px 0;
 }
 
@@ -299,10 +349,11 @@ section {
   font-size: 16px;
   transition: all 0.3s;
   margin-top: 50px;
+  border-radius: var(--border-radius);
 }
 
 #about .about__resume__btn:hover {
-  background-color: #33caca;
+  background-color: var(--blue);
 }
 
 #about .about__resume__btn .fa-download {
@@ -377,13 +428,13 @@ section {
 
 .social-links a :hover {
   transition: all 0.2s;
-  color: #33caca;
+  color: #30e0c5;
 }
 
 footer {
   padding-top: 48px;
   padding-bottom: 48px;
-  background-color: #0f0f0f;
+  background-color: var(--muted-gray);
   color: var(--text-light);
   font-size: 14px;
   text-align: center;
@@ -395,6 +446,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .side__element {
+    display: none;
+  }
   .site__banner .site__banner__content__title {
     padding: 0 20px;
   }
@@ -422,6 +476,9 @@ footer {
 @media screen and (min-width: 768px) {
   .featured__project .project__title {
     margin: 0px 0px 20px;
+  }
+  #about {
+    padding: 130px 0;
   }
 }
 
@@ -478,6 +535,7 @@ footer {
   grid-area: 1 / 6 / -1 / -1;
   position: relative;
   z-index: 1;
+  border-radius: var(--border-radius);
 }
 
 .project__image .project__img__wrapper {
@@ -487,6 +545,11 @@ footer {
   border-radius: var(--border-radius);
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%);
+  border-radius: var(--border-radius);
+}
+
+.project__image .project__img__wrapper img {
+  border-radius: var(--border-radius);
 }
 
 .project__image a {
@@ -507,6 +570,7 @@ footer {
   transition: var(--transition);
   background-color: var(--navy);
   mix-blend-mode: screen;
+  border-radius: var(--border-radius);
 }
 
 .project__image a:hover, .project__image a:focus {
@@ -521,7 +585,7 @@ footer {
 .project__overline {
   margin: 10px 0px;
   color: var(--blue);
-  font-family: var(--font-mono);
+  font-family: var(--font);
   font-size: var(--fz-xs);
   font-weight: 400;
 }
@@ -556,7 +620,7 @@ footer {
 .project__tech__list li {
   margin: 0px 20px 5px 0px;
   color: var(--light-slate);
-  font-family: var(--font-mono);
+  font-family: var(--font);
   font-size: var(--fz-xs);
   white-space: nowrap;
 }
@@ -594,6 +658,11 @@ footer {
   -webkit-box-align: center;
   align-items: center;
   padding: 10px;
+}
+
+.project__links a svg:hover {
+  color: var(--blue);
+  transition: var(--transition);
 }
 
 a svg {
