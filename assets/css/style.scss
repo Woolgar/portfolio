@@ -605,7 +605,24 @@ footer {
   margin-left: 0px;
   margin-right: -10px;
 }
-
+.btn {
+  display: flex;
+  width: 150px;
+  padding: 1.25rem 1.75rem;
+  color: var(--text-light);
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: var(--border-radius);
+  justify-content: center;
+  margin: auto;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 50px;
+  &:hover {
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+  }
+}
 .project__links {
   display: flex;
   -webkit-box-align: center;
@@ -646,4 +663,31 @@ a svg {
 
 .hidden {
   opacity: 0;
+}
+
+#contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0;
+  color: var(--white);
+  .contact__wrapper {
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  .contact__heading {
+    justify-content: center;
+    color: var(--blue);
+    &::after {
+      display: none;
+    }
+  }
 }

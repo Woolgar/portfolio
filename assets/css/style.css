@@ -641,6 +641,26 @@ footer {
   margin-right: -10px;
 }
 
+.btn {
+  display: flex;
+  width: 150px;
+  padding: 1.25rem 1.75rem;
+  color: var(--text-light);
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: var(--border-radius);
+  justify-content: center;
+  margin: auto;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 50px;
+}
+
+.btn:hover {
+  background-color: #30e0c5;
+  border: 1px solid #30e0c5;
+}
+
 .project__links {
   display: flex;
   -webkit-box-align: center;
@@ -682,5 +702,37 @@ a svg {
 
 .hidden {
   opacity: 0;
+}
+
+#contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0;
+  color: var(--white);
+}
+
+#contact .contact__wrapper {
+  max-width: 600px;
+  text-align: center;
+}
+
+#contact h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+#contact .contact__heading {
+  justify-content: center;
+  color: var(--blue);
+}
+
+#contact .contact__heading::after {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
